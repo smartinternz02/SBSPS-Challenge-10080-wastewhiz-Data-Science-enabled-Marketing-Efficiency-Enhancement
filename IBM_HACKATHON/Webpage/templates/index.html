@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(255, 186, 134);
+    }
+  </style>
+</head>
+
+
+<body class="center">
+
+  <h1 style="color:rgb(121, 21, 91); font-weight: 1000;">
+    <i class="fas fa-arrow-trend-up"></i>
+  WasteWhiz
+  </h1>
+
+  <p style="color:rgb(194, 51, 115); font-weight: 800;">
+    Market Prediction
+  </p>
+
+  <form action="result">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Industry" required type="text" name="industry">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Deal Value" required type="text" name="deal_value">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Weighted amount" required type="text" name="weighted_amt">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Pitch" required type="text" name="pitch">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Lead revenue (in $)" required type="text" name="revenue">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Fund Category" required type="text" name="fund">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Geography (India/USA)" type="text" required name="geo">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Location" type="text" required name="location">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Designation" required type="text" name="desgn">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Hiring Candidate Role" required type="text" name="hcr">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Lead Source" required type="text" name="source">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Level of meeting" required type="text" name="level">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Last Lead Update" required type="text" name="update">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Resource" required type="text" name="resource">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Ratings" required type="text" name="rating">
+    </div>
+
+
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict'>
+
+  </form>
+</body>
+
+</html>
